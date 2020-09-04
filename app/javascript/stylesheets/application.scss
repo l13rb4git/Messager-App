@@ -2,3 +2,22 @@
     height: 100vh;
     overflow-y: hidden;
 }
+
+.chat-room > .chat-box{
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+
+    input[type=text] {
+        height: 45px;
+        font-size: 12px;
+        padding: 8px;
+        width: 100%;
+    }
+}
+
+.form-group > .btn {
+    height: 45px;
+}

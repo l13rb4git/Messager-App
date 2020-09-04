@@ -6,7 +6,7 @@
       <%= render partial: 'all_rooms', locals: { rooms: @rooms } %>
     </div>
     
-    <div class="col-9">
+    <div class="col-9 chat-room">
       <% if @room.present? %>
         <%= @room.name %>
       <% end %>

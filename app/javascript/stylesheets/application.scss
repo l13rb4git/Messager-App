@@ -18,3 +18,19 @@
 .chat-form > .btn {
     height: 45px;
 }
+
+.message {
+   display: inline-block; 
+}
+
+.message > .content {
+    background-color: #eeeeee;
+    padding: 8px 18px;
+    border-radius: 15px;
+}
+
+.message > .author {
+    font-size: 0.8rem;
+    color: #777777;
+    margin-left: 10px;
+}

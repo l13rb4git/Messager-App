@@ -1,5 +1,5 @@
 <% @room.messages.each do |message| %>
-  <div class="message <%= 'me' if message.user == current_user %>">
+  <div class="message mb-3 <%= 'me' if message.user == current_user %>">
     <div class="content">
       <%= message.content %>
     </div>
@@ -7,4 +7,5 @@
       <%= message.user.username %>
     </div>
   </div>
+  <br>
 <% end %>

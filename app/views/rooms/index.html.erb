@@ -11,6 +11,7 @@
       <% if @room.present? %>
         <div class="chat-room">
           <%= @room.name %>
+          <br>
           <%= render partial: 'messages/all_messages', locals: { room: @room } %>
           <div class="chat-box">
             <%= render partial: 'messages/form',

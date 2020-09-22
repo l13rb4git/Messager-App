@@ -27,7 +27,9 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.user = current_user
     @message.save
-    redirect_to request.referer
+
+    html = render(partial: "messages/message", locals: { message: @message })
+    ActionCable.server.broadcast "room_channel_#{@message.room_id}", html: html
   end
 
   # PATCH/PUT /messages/1

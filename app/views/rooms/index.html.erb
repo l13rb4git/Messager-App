@@ -11,9 +11,7 @@
       <% if @room.present? %>
         <div class="chat-room">
           <%= @room.name %>
-          <% @room.messages.each do |message| %>
-            <p><%= message.user.username %>: <%= message.content %></p>
-          <% end %>
+          <%= render partial: 'messages/all_messages', locals: { room: @room } %>
           <div class="chat-box">
             <%= render partial: 'messages/form',
                        locals: { message: Message.new, room: @room, } 

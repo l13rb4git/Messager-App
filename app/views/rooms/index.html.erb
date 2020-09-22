@@ -10,8 +10,7 @@
     <div class="col-9 chat-room">
       <% if @room.present? %>
         <div class="chat-room">
-          <%= @room.name %>
-          <br>
+          <%= render partial: 'rooms/navbar', locals: { room: @room } %>
           <%= render partial: 'messages/all_messages', locals: { room: @room } %>
           <div class="chat-box">
             <%= render partial: 'messages/form',

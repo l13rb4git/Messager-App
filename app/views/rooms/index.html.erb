@@ -1,4 +1,6 @@
-<div id="current_user_id" data-user-id="<%= User.find(session[:user_id]).id %>"></div>
+<div id="current_user_id" data-user-id="<%= current_user().id %>"></div>
+<div id="current_room_id" data-room-id="<%= @room.try(:id) %>"></div>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-3">

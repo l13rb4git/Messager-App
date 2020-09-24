@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.user = current_user
     @message.save
-    SendMessageJob.perform_later(@message)
+    SendMessageJob.perform_later(@message, User.find(session[:user_id]))
   end
 
   # PATCH/PUT /messages/1

@@ -19,15 +19,15 @@ document.addEventListener('turbolinks:load', () => {
 
           var html = new DOMParser().parseFromString('', 'text/xml');
           html.getElementsByTagName('html')[0].innerHTML = data.html
+          html.getElementById("message").classList.add('me');
 
           const current_user_element = document.getElementById('current_user_id');
           const current_user_id = current_user_element.getAttribute('data-user-id');
 
           if (current_user_id != data.message.user_id) {
-              html.getElementById("message").classList.remove('me');
-          } else {
-              html.getElementById("message").classList.add('me');
-          }
+              html.getElementById("message").classList.toggle('me');
+          } 
+
           messageContainer.innerHTML = messageContainer.innerHTML + html.getElementsByTagName('html')[0].innerHTML
       }
     });

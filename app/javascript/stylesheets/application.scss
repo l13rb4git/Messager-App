@@ -46,3 +46,40 @@
     color: #777777;
     margin-left: 10px;
 }
+
+.card.no-outline {
+    border: none;
+}
+
+.room-link {
+   &:hover {
+       text-decoration: none;
+   }
+}
+
+.room-card {
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+        background-color: #eeeeee;
+    }
+} 
+
+.room-card {
+    &.active {
+        background-color: black;
+    }
+}
+
+.room-card {
+    .name {
+        font-weight: bold;
+        color: black;
+    }
+
+    .member-count {
+        color: #777777;
+        font-weight: light;
+    }
+}

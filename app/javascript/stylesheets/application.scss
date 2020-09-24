@@ -69,6 +69,15 @@
 .room-card {
     &.active {
         background-color: black;
+
+    .name {
+        color: white;
+    }
+    
+    .member-count {
+        color: #e0e0e0;
+    }
+
     }
 }
 

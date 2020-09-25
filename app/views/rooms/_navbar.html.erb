@@ -1,3 +1,4 @@
-<nav class="navbar navbar-light bg-light mb-4">
-  <span class="navbar-brand mb-0 h1"><%= room.name %></span>
+<nav class="navbar navbar-light mb-2">
+  <span class="navbar-brand mb-0 h1"><b><%= room.name %></b></span>
+  <small><%= room.users.uniq.count %> Members</small>
 </nav>
